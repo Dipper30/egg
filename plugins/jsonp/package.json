@@ -62,14 +62,15 @@
     "egg": "workspace:*",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "scripts": {
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint --type-aware",
+    "lint": "vite lint --type-aware",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint:fix && vitest run",
+    "test": "npm run lint:fix && vite test run",
     "prepublishOnly": "npm run build"
   },
   "main": "./dist/index.js",

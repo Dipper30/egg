@@ -68,14 +68,15 @@
     "egg-view-nunjucks": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "scripts": {
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint --type-aware",
+    "lint": "vite lint --type-aware",
     "lint:fix": "npm run lint -- --fix",
-    "test": "vitest run",
+    "test": "vite test run",
     "prepublishOnly": "npm run build"
   },
   "files": [

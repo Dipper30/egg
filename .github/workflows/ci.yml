@@ -16,6 +16,9 @@ permissions:
   id-token: write
   actions: write
 
+env:
+  VP_TOKEN: ${{ secrets.VP_TOKEN }}
+
 jobs:
   typecheck:
     runs-on: ubuntu-latest

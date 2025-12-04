@@ -9,14 +9,14 @@
   },
   "devDependencies": {
     "@eggjs/bin": "workspace:*",
-    "oxlint": "catalog:"
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "scripts": {
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "egg-bin test",
     "cov": "egg-bin cov",
-    "lint": "oxlint",
+    "lint": "vite lint",
     "ci": "pnpm run lint && pnpm run cov",
     "start": "egg-scripts start --daemon",
     "stop": "egg-scripts stop"

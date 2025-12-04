@@ -74,14 +74,15 @@
     "tsdown": "catalog:",
     "typescript": "catalog:",
     "urllib": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "scripts": {
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint --type-aware",
+    "lint": "vite lint --type-aware",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint:fix && vitest",
+    "test": "npm run lint:fix && vite test",
     "prepublishOnly": "npm run build"
   },
   "files": [

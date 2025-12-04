@@ -56,9 +56,9 @@
   },
   "scripts": {
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
-    "test": "vitest run",
+    "test": "vite test run",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint --type-aware",
+    "lint": "vite lint --type-aware",
     "prepublishOnly": "pnpm run build"
   }
 }

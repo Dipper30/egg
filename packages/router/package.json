@@ -41,12 +41,13 @@
     "@types/urijs": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "scripts": {
-    "lint": "oxlint --type-aware",
+    "lint": "vite lint --type-aware",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "vite test run",
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build",
     "prebench": "npm run build",

@@ -43,8 +43,8 @@
   "scripts": {
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint --type-aware",
-    "test": "vitest run",
+    "lint": "vite lint --type-aware",
+    "test": "vite test run",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
@@ -53,12 +53,12 @@
   "devDependencies": {
     "@eggjs/tsconfig": "workspace:*",
     "@types/node": "catalog:",
-    "oxlint": "catalog:",
     "path-to-regexp-v8": "npm:path-to-regexp@^8.3.0",
     "rimraf": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",

@@ -22,9 +22,9 @@
     "cookies": "catalog:",
     "keygrip": "catalog:",
     "@eggjs/tsconfig": "workspace:*",
-    "oxlint": "catalog:",
     "typescript": "catalog:",
-    "tsdown": "catalog:"
+    "tsdown": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "repository": {
     "type": "git",
@@ -37,10 +37,10 @@
   "scripts": {
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint --type-aware",
+    "lint": "vite lint --type-aware",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint:fix && vitest run",
-    "ci": "vitest run --coverage",
+    "test": "npm run lint:fix && vite test run",
+    "ci": "vite test run --coverage",
     "prepublishOnly": "pnpm run build"
   },
   "type": "module",

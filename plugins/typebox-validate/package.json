@@ -55,8 +55,8 @@
   "scripts": {
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint --type-aware",
-    "test": "vitest run",
+    "lint": "vite lint --type-aware",
+    "test": "vite test run",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
@@ -73,12 +73,12 @@
     "@eggjs/tsconfig": "workspace:*",
     "@types/node": "catalog:",
     "egg": "workspace:*",
-    "oxlint": "catalog:",
     "rimraf": "catalog:",
     "semver": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",

@@ -58,9 +58,9 @@
     "node": ">=22.18.0"
   },
   "scripts": {
-    "lint": "oxlint --type-aware",
+    "lint": "vite lint --type-aware",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "vite test run",
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
     "prepublishOnly": "pnpm run build"
   },

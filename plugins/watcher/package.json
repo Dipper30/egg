@@ -23,9 +23,9 @@
   },
   "description": "file watcher plugin for egg",
   "scripts": {
-    "lint": "oxlint --type-aware",
+    "lint": "vite lint --type-aware",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "vite test run",
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
     "prepublishOnly": "pnpm run build"
   },
@@ -59,7 +59,8 @@
     "egg": "workspace:*",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "type": "module",
   "exports": {

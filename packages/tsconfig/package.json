@@ -11,8 +11,8 @@
     "tsconfig.json"
   ],
   "scripts": {
-    "lint": "oxlint",
-    "test": "vitest run"
+    "lint": "vite lint",
+    "test": "vite test run"
   },
   "author": "killagu <killa123@126.com>",
   "license": "MIT",
@@ -34,7 +34,8 @@
   "devDependencies": {
     "coffee": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "type": "module"
 }

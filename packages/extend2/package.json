@@ -16,8 +16,8 @@
   "scripts": {
     "build": "tsdown && rimraf dist *.tsbuildinfo && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint",
-    "test": "vitest run",
+    "lint": "vite lint",
+    "test": "vite test run",
     "prepublishOnly": "pnpm run build"
   },
   "keywords": [
@@ -33,10 +33,10 @@
   "homepage": "https://github.com/eggjs/egg/tree/next/packages/extend2",
   "devDependencies": {
     "@eggjs/tsconfig": "workspace:*",
-    "oxlint": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "license": "MIT",
   "files": [

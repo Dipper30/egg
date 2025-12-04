@@ -18,13 +18,14 @@
     "@eggjs/tsconfig": "workspace:*",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "scripts": {
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
-    "test": "vitest run",
-    "cov": "vitest run --coverage",
+    "test": "vite test run",
+    "cov": "vite test run --coverage",
     "lint": "eslint . --ext .ts",
     "ci": "pnpm run lint && pnpm run cov",
     "prepublishOnly": "pnpm run build",

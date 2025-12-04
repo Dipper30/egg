@@ -59,9 +59,9 @@
   "scripts": {
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
-    "lint": "oxlint --type-aware",
+    "lint": "vite lint --type-aware",
     "pretest": "pnpm run build",
-    "test": "vitest run --bail 1 --no-file-parallelism",
+    "test": "vite test run --bail 1 --no-file-parallelism",
     "cov": "pnpm test --coverage",
     "ci": "pnpm run cov",
     "prepublishOnly": "pnpm run build"
@@ -81,11 +81,11 @@
     "detect-port": "catalog:",
     "egg": "workspace:*",
     "mm": "catalog:",
-    "oxlint": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
     "urllib": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",

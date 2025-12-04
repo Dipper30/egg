@@ -20,7 +20,7 @@
     "node": ">=20.19.0"
   },
   "scripts": {
-    "test": "vitest run",
+    "test": "vite test run",
     "build": "tsdown",
     "prepublishOnly": "pnpm run build"
   },
